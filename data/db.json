@@ -1,0 +1,1665 @@
+{
+  "schema": 1,
+  "users": [
+    {
+      "id": "u-001",
+      "name": "Ana Administradora",
+      "email": "admin@medical.test",
+      "password": "Admin123!",
+      "role": "admin",
+      "sex": "F",
+      "document": "1000000001",
+      "birthdate": "1985-04-12",
+      "phone": "3000000001",
+      "active": true,
+      "createdAt": "2025-06-01"
+    },
+    {
+      "id": "u-002",
+      "name": "Sofía Atención",
+      "email": "staff@medical.test",
+      "password": "Staff123!",
+      "role": "staff",
+      "sex": "F",
+      "document": "1000000002",
+      "birthdate": "1990-08-23",
+      "phone": "3000000002",
+      "active": true,
+      "createdAt": "2025-06-01"
+    },
+    {
+      "id": "u-003",
+      "name": "Carlos Méndez",
+      "email": "carlos.mendez@medical.test",
+      "password": "Staff123!",
+      "role": "staff",
+      "sex": "M",
+      "document": "1000000003",
+      "birthdate": "1988-01-30",
+      "phone": "3000000003",
+      "active": true,
+      "createdAt": "2025-06-01"
+    },
+    {
+      "id": "u-004",
+      "name": "Laura Gómez",
+      "email": "client@medical.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "F",
+      "document": "1010000000",
+      "birthdate": "1992-03-15",
+      "phone": "3110000000",
+      "active": true,
+      "createdAt": "2025-11-12"
+    },
+    {
+      "id": "u-005",
+      "name": "Andrés Ramírez",
+      "email": "andres.ramirez@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "M",
+      "document": "1010000137",
+      "birthdate": "1987-07-02",
+      "phone": "3110091357",
+      "active": true,
+      "createdAt": "2026-02-10"
+    },
+    {
+      "id": "u-006",
+      "name": "Valentina Torres",
+      "email": "valentina.torres@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "F",
+      "document": "1010000274",
+      "birthdate": "1995-11-28",
+      "phone": "3110182714",
+      "active": true,
+      "createdAt": "2026-05-14"
+    },
+    {
+      "id": "u-007",
+      "name": "Miguel Herrera",
+      "email": "miguel.herrera@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "M",
+      "document": "1010000411",
+      "birthdate": "1979-02-09",
+      "phone": "3110274071",
+      "active": true,
+      "createdAt": "2025-12-02"
+    },
+    {
+      "id": "u-008",
+      "name": "Camila Rojas",
+      "email": "camila.rojas@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "F",
+      "document": "1010000548",
+      "birthdate": "1968-09-17",
+      "phone": "3110365428",
+      "active": true,
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "u-009",
+      "name": "Jorge Castillo",
+      "email": "jorge.castillo@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "M",
+      "document": "1010000685",
+      "birthdate": "1974-05-21",
+      "phone": "3110456785",
+      "active": true,
+      "createdAt": "2026-03-11"
+    },
+    {
+      "id": "u-010",
+      "name": "Daniela Moreno",
+      "email": "daniela.moreno@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "F",
+      "document": "1010000822",
+      "birthdate": "1999-12-05",
+      "phone": "3110548142",
+      "active": true,
+      "createdAt": "2026-04-02"
+    },
+    {
+      "id": "u-011",
+      "name": "Felipe Vargas",
+      "email": "felipe.vargas@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "M",
+      "document": "1010000959",
+      "birthdate": "2001-06-30",
+      "phone": "3110639499",
+      "active": true,
+      "createdAt": "2026-08-19"
+    },
+    {
+      "id": "u-012",
+      "name": "Ricardo Salazar",
+      "email": "ricardo.salazar@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "M",
+      "document": "1010001096",
+      "birthdate": "1965-10-11",
+      "phone": "3110730856",
+      "active": true,
+      "createdAt": "2025-10-28"
+    },
+    {
+      "id": "u-013",
+      "name": "Isabela Mejía",
+      "email": "isabela.mejia@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "F",
+      "document": "1010001233",
+      "birthdate": "1983-01-19",
+      "phone": "3110822213",
+      "active": true,
+      "createdAt": "2026-06-17"
+    },
+    {
+      "id": "u-014",
+      "name": "Pablo Navarro",
+      "email": "pablo.navarro@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "M",
+      "document": "1010001370",
+      "birthdate": "1971-03-08",
+      "phone": "3110913570",
+      "active": true,
+      "createdAt": "2025-10-09"
+    },
+    {
+      "id": "u-015",
+      "name": "Natalia Pardo",
+      "email": "natalia.pardo@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "F",
+      "document": "1010001507",
+      "birthdate": "2003-08-14",
+      "phone": "3111004927",
+      "active": true,
+      "createdAt": "2026-09-01"
+    },
+    {
+      "id": "u-016",
+      "name": "Héctor Duarte",
+      "email": "hector.duarte@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "M",
+      "document": "1010001644",
+      "birthdate": "1958-04-25",
+      "phone": "3111096284",
+      "active": true,
+      "createdAt": "2025-08-22"
+    },
+    {
+      "id": "u-017",
+      "name": "Mariana Ortiz",
+      "email": "mariana.ortiz@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "F",
+      "document": "1010001781",
+      "birthdate": "1990-07-07",
+      "phone": "3111187641",
+      "active": true,
+      "createdAt": "2026-07-01"
+    },
+    {
+      "id": "u-018",
+      "name": "Sebastián León",
+      "email": "sebastian.leon@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "M",
+      "document": "1010001918",
+      "birthdate": "1984-12-22",
+      "phone": "3111278998",
+      "active": true,
+      "createdAt": "2026-02-27"
+    },
+    {
+      "id": "u-019",
+      "name": "Juliana Peña",
+      "email": "juliana.pena@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "F",
+      "document": "1010002055",
+      "birthdate": "1977-05-03",
+      "phone": "3111370355",
+      "active": true,
+      "createdAt": "2026-03-30"
+    },
+    {
+      "id": "u-020",
+      "name": "Tomás Aguilar",
+      "email": "tomas.aguilar@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "M",
+      "document": "1010002192",
+      "birthdate": "1993-10-16",
+      "phone": "3111461712",
+      "active": true,
+      "createdAt": "2026-05-25"
+    },
+    {
+      "id": "u-021",
+      "name": "Lucía Fernández",
+      "email": "lucia.fernandez@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "F",
+      "document": "1010002329",
+      "birthdate": "1996-02-01",
+      "phone": "3111553069",
+      "active": true,
+      "createdAt": "2026-06-09"
+    },
+    {
+      "id": "u-022",
+      "name": "Gabriela Silva",
+      "email": "gabriela.silva@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "F",
+      "document": "1010002466",
+      "birthdate": "1972-11-11",
+      "phone": "3111644426",
+      "active": true,
+      "createdAt": "2026-04-21"
+    },
+    {
+      "id": "u-023",
+      "name": "Diego Cárdenas",
+      "email": "diego.cardenas@correo.test",
+      "password": "Cliente123!",
+      "role": "client",
+      "sex": "M",
+      "document": "1010002603",
+      "birthdate": "1989-09-09",
+      "phone": "3111735783",
+      "active": true,
+      "createdAt": "2026-01-13"
+    }
+  ],
+  "exams": [
+    {
+      "id": "e-0088",
+      "userId": "u-016",
+      "type": "glucose",
+      "value": 89,
+      "date": "2025-08-22",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0089",
+      "userId": "u-016",
+      "type": "cholesterol",
+      "value": 192,
+      "date": "2025-08-22",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0090",
+      "userId": "u-016",
+      "type": "triglycerides",
+      "value": 125,
+      "date": "2025-08-22",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0091",
+      "userId": "u-016",
+      "type": "hemoglobin",
+      "value": 14.3,
+      "date": "2025-08-22",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0087",
+      "userId": "u-014",
+      "type": "glucose",
+      "value": 99,
+      "date": "2025-10-09",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0073",
+      "userId": "u-012",
+      "type": "glucose",
+      "value": 126,
+      "date": "2025-10-28",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0074",
+      "userId": "u-012",
+      "type": "cholesterol",
+      "value": 219,
+      "date": "2025-10-28",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0075",
+      "userId": "u-012",
+      "type": "triglycerides",
+      "value": 261,
+      "date": "2025-10-28",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0076",
+      "userId": "u-012",
+      "type": "hemoglobin",
+      "value": 14.1,
+      "date": "2025-10-28",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0001",
+      "userId": "u-004",
+      "type": "glucose",
+      "value": 96,
+      "date": "2025-11-12",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0002",
+      "userId": "u-004",
+      "type": "cholesterol",
+      "value": 209,
+      "date": "2025-11-12",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0003",
+      "userId": "u-004",
+      "type": "triglycerides",
+      "value": 134,
+      "date": "2025-11-12",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0004",
+      "userId": "u-004",
+      "type": "hemoglobin",
+      "value": 13.3,
+      "date": "2025-11-12",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0029",
+      "userId": "u-007",
+      "type": "glucose",
+      "value": 98,
+      "date": "2025-12-02",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0030",
+      "userId": "u-007",
+      "type": "cholesterol",
+      "value": 192,
+      "date": "2025-12-02",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0031",
+      "userId": "u-007",
+      "type": "triglycerides",
+      "value": 158,
+      "date": "2025-12-02",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0032",
+      "userId": "u-007",
+      "type": "hemoglobin",
+      "value": 15.8,
+      "date": "2025-12-02",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0140",
+      "userId": "u-023",
+      "type": "glucose",
+      "value": 105,
+      "date": "2026-01-13",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0141",
+      "userId": "u-023",
+      "type": "cholesterol",
+      "value": 199,
+      "date": "2026-01-13",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0142",
+      "userId": "u-023",
+      "type": "triglycerides",
+      "value": 143,
+      "date": "2026-01-13",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0143",
+      "userId": "u-023",
+      "type": "hemoglobin",
+      "value": 14.9,
+      "date": "2026-01-13",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0041",
+      "userId": "u-008",
+      "type": "glucose",
+      "value": 148,
+      "date": "2026-01-20",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0042",
+      "userId": "u-008",
+      "type": "cholesterol",
+      "value": 226,
+      "date": "2026-01-20",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0043",
+      "userId": "u-008",
+      "type": "triglycerides",
+      "value": 191,
+      "date": "2026-01-20",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0044",
+      "userId": "u-008",
+      "type": "hemoglobin",
+      "value": 13.2,
+      "date": "2026-01-20",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0013",
+      "userId": "u-005",
+      "type": "glucose",
+      "value": 85,
+      "date": "2026-02-10",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0014",
+      "userId": "u-005",
+      "type": "cholesterol",
+      "value": 183,
+      "date": "2026-02-10",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0015",
+      "userId": "u-005",
+      "type": "triglycerides",
+      "value": 108,
+      "date": "2026-02-10",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0016",
+      "userId": "u-005",
+      "type": "hemoglobin",
+      "value": 15.3,
+      "date": "2026-02-10",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0100",
+      "userId": "u-018",
+      "type": "glucose",
+      "value": 97,
+      "date": "2026-02-27",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0101",
+      "userId": "u-018",
+      "type": "cholesterol",
+      "value": 185,
+      "date": "2026-02-27",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0102",
+      "userId": "u-018",
+      "type": "triglycerides",
+      "value": 174,
+      "date": "2026-02-27",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0103",
+      "userId": "u-018",
+      "type": "hemoglobin",
+      "value": 14.3,
+      "date": "2026-02-27",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0053",
+      "userId": "u-009",
+      "type": "glucose",
+      "value": 97,
+      "date": "2026-03-11",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0054",
+      "userId": "u-009",
+      "type": "cholesterol",
+      "value": 251,
+      "date": "2026-03-11",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0055",
+      "userId": "u-009",
+      "type": "triglycerides",
+      "value": 232,
+      "date": "2026-03-11",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0056",
+      "userId": "u-009",
+      "type": "hemoglobin",
+      "value": 15.4,
+      "date": "2026-03-11",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0005",
+      "userId": "u-004",
+      "type": "glucose",
+      "value": 89,
+      "date": "2026-03-20",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0006",
+      "userId": "u-004",
+      "type": "cholesterol",
+      "value": 217,
+      "date": "2026-03-20",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0007",
+      "userId": "u-004",
+      "type": "triglycerides",
+      "value": 131,
+      "date": "2026-03-20",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0008",
+      "userId": "u-004",
+      "type": "hemoglobin",
+      "value": 13,
+      "date": "2026-03-20",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0108",
+      "userId": "u-019",
+      "type": "glucose",
+      "value": 93,
+      "date": "2026-03-30",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0109",
+      "userId": "u-019",
+      "type": "cholesterol",
+      "value": 222,
+      "date": "2026-03-30",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0110",
+      "userId": "u-019",
+      "type": "triglycerides",
+      "value": 144,
+      "date": "2026-03-30",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0111",
+      "userId": "u-019",
+      "type": "hemoglobin",
+      "value": 14.5,
+      "date": "2026-03-30",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0061",
+      "userId": "u-010",
+      "type": "glucose",
+      "value": 78,
+      "date": "2026-04-02",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0062",
+      "userId": "u-010",
+      "type": "cholesterol",
+      "value": 155,
+      "date": "2026-04-02",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0063",
+      "userId": "u-010",
+      "type": "triglycerides",
+      "value": 92,
+      "date": "2026-04-02",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0064",
+      "userId": "u-010",
+      "type": "hemoglobin",
+      "value": 10.6,
+      "date": "2026-04-02",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0033",
+      "userId": "u-007",
+      "type": "glucose",
+      "value": 106,
+      "date": "2026-04-15",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0034",
+      "userId": "u-007",
+      "type": "cholesterol",
+      "value": 187,
+      "date": "2026-04-15",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0035",
+      "userId": "u-007",
+      "type": "triglycerides",
+      "value": 152,
+      "date": "2026-04-15",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0036",
+      "userId": "u-007",
+      "type": "hemoglobin",
+      "value": 15.8,
+      "date": "2026-04-15",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0132",
+      "userId": "u-022",
+      "type": "glucose",
+      "value": 80,
+      "date": "2026-04-21",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0133",
+      "userId": "u-022",
+      "type": "cholesterol",
+      "value": 166,
+      "date": "2026-04-21",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0134",
+      "userId": "u-022",
+      "type": "triglycerides",
+      "value": 106,
+      "date": "2026-04-21",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0135",
+      "userId": "u-022",
+      "type": "hemoglobin",
+      "value": 13.8,
+      "date": "2026-04-21",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0077",
+      "userId": "u-012",
+      "type": "glucose",
+      "value": 128,
+      "date": "2026-05-06",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0078",
+      "userId": "u-012",
+      "type": "cholesterol",
+      "value": 237,
+      "date": "2026-05-06",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0079",
+      "userId": "u-012",
+      "type": "triglycerides",
+      "value": 262,
+      "date": "2026-05-06",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0080",
+      "userId": "u-012",
+      "type": "hemoglobin",
+      "value": 14.1,
+      "date": "2026-05-06",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0021",
+      "userId": "u-006",
+      "type": "glucose",
+      "value": 82,
+      "date": "2026-05-14",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0022",
+      "userId": "u-006",
+      "type": "cholesterol",
+      "value": 174,
+      "date": "2026-05-14",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0023",
+      "userId": "u-006",
+      "type": "triglycerides",
+      "value": 90,
+      "date": "2026-05-14",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0024",
+      "userId": "u-006",
+      "type": "hemoglobin",
+      "value": 13.9,
+      "date": "2026-05-14",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0116",
+      "userId": "u-020",
+      "type": "glucose",
+      "value": 83,
+      "date": "2026-05-25",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0117",
+      "userId": "u-020",
+      "type": "cholesterol",
+      "value": 173,
+      "date": "2026-05-25",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0118",
+      "userId": "u-020",
+      "type": "triglycerides",
+      "value": 120,
+      "date": "2026-05-25",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0119",
+      "userId": "u-020",
+      "type": "hemoglobin",
+      "value": 18.5,
+      "date": "2026-05-25",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0124",
+      "userId": "u-021",
+      "type": "glucose",
+      "value": 61,
+      "date": "2026-06-09",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0125",
+      "userId": "u-021",
+      "type": "cholesterol",
+      "value": 149,
+      "date": "2026-06-09",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0126",
+      "userId": "u-021",
+      "type": "triglycerides",
+      "value": 81,
+      "date": "2026-06-09",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0127",
+      "userId": "u-021",
+      "type": "hemoglobin",
+      "value": 12.2,
+      "date": "2026-06-09",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0085",
+      "userId": "u-013",
+      "type": "glucose",
+      "value": 96,
+      "date": "2026-06-17",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0086",
+      "userId": "u-013",
+      "type": "cholesterol",
+      "value": 192,
+      "date": "2026-06-17",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0092",
+      "userId": "u-017",
+      "type": "glucose",
+      "value": 82,
+      "date": "2026-07-01",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0093",
+      "userId": "u-017",
+      "type": "cholesterol",
+      "value": 170,
+      "date": "2026-07-01",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0094",
+      "userId": "u-017",
+      "type": "triglycerides",
+      "value": 95,
+      "date": "2026-07-01",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0095",
+      "userId": "u-017",
+      "type": "hemoglobin",
+      "value": 12.9,
+      "date": "2026-07-01",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0045",
+      "userId": "u-008",
+      "type": "glucose",
+      "value": 138,
+      "date": "2026-07-08",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0046",
+      "userId": "u-008",
+      "type": "cholesterol",
+      "value": 222,
+      "date": "2026-07-08",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0047",
+      "userId": "u-008",
+      "type": "triglycerides",
+      "value": 178,
+      "date": "2026-07-08",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0048",
+      "userId": "u-008",
+      "type": "hemoglobin",
+      "value": 13.2,
+      "date": "2026-07-08",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0144",
+      "userId": "u-023",
+      "type": "glucose",
+      "value": 99,
+      "date": "2026-07-22",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0145",
+      "userId": "u-023",
+      "type": "cholesterol",
+      "value": 182,
+      "date": "2026-07-22",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0146",
+      "userId": "u-023",
+      "type": "triglycerides",
+      "value": 135,
+      "date": "2026-07-22",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0147",
+      "userId": "u-023",
+      "type": "hemoglobin",
+      "value": 14.7,
+      "date": "2026-07-22",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0069",
+      "userId": "u-011",
+      "type": "glucose",
+      "value": 89,
+      "date": "2026-08-19",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0070",
+      "userId": "u-011",
+      "type": "cholesterol",
+      "value": 156,
+      "date": "2026-08-19",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0071",
+      "userId": "u-011",
+      "type": "triglycerides",
+      "value": 100,
+      "date": "2026-08-19",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0072",
+      "userId": "u-011",
+      "type": "hemoglobin",
+      "value": 12.8,
+      "date": "2026-08-19",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0104",
+      "userId": "u-018",
+      "type": "glucose",
+      "value": 99,
+      "date": "2026-08-30",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0105",
+      "userId": "u-018",
+      "type": "cholesterol",
+      "value": 204,
+      "date": "2026-08-30",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0106",
+      "userId": "u-018",
+      "type": "triglycerides",
+      "value": 185,
+      "date": "2026-08-30",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0107",
+      "userId": "u-018",
+      "type": "hemoglobin",
+      "value": 14.5,
+      "date": "2026-08-30",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0136",
+      "userId": "u-022",
+      "type": "glucose",
+      "value": 82,
+      "date": "2026-09-03",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0137",
+      "userId": "u-022",
+      "type": "cholesterol",
+      "value": 165,
+      "date": "2026-09-03",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0138",
+      "userId": "u-022",
+      "type": "triglycerides",
+      "value": 106,
+      "date": "2026-09-03",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0139",
+      "userId": "u-022",
+      "type": "hemoglobin",
+      "value": 14,
+      "date": "2026-09-03",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0017",
+      "userId": "u-005",
+      "type": "glucose",
+      "value": 90,
+      "date": "2026-09-05",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0018",
+      "userId": "u-005",
+      "type": "cholesterol",
+      "value": 167,
+      "date": "2026-09-05",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0019",
+      "userId": "u-005",
+      "type": "triglycerides",
+      "value": 112,
+      "date": "2026-09-05",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0020",
+      "userId": "u-005",
+      "type": "hemoglobin",
+      "value": 15.3,
+      "date": "2026-09-05",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0120",
+      "userId": "u-020",
+      "type": "glucose",
+      "value": 85,
+      "date": "2026-09-08",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0121",
+      "userId": "u-020",
+      "type": "cholesterol",
+      "value": 171,
+      "date": "2026-09-08",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0122",
+      "userId": "u-020",
+      "type": "triglycerides",
+      "value": 113,
+      "date": "2026-09-08",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0123",
+      "userId": "u-020",
+      "type": "hemoglobin",
+      "value": 17.7,
+      "date": "2026-09-08",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0037",
+      "userId": "u-007",
+      "type": "glucose",
+      "value": 118,
+      "date": "2026-09-10",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0038",
+      "userId": "u-007",
+      "type": "cholesterol",
+      "value": 189,
+      "date": "2026-09-10",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0039",
+      "userId": "u-007",
+      "type": "triglycerides",
+      "value": 164,
+      "date": "2026-09-10",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0040",
+      "userId": "u-007",
+      "type": "hemoglobin",
+      "value": 14.9,
+      "date": "2026-09-10",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0112",
+      "userId": "u-019",
+      "type": "glucose",
+      "value": 90,
+      "date": "2026-09-12",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0113",
+      "userId": "u-019",
+      "type": "cholesterol",
+      "value": 222,
+      "date": "2026-09-12",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0114",
+      "userId": "u-019",
+      "type": "triglycerides",
+      "value": 139,
+      "date": "2026-09-12",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0115",
+      "userId": "u-019",
+      "type": "hemoglobin",
+      "value": 14.3,
+      "date": "2026-09-12",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0057",
+      "userId": "u-009",
+      "type": "glucose",
+      "value": 96,
+      "date": "2026-09-14",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0058",
+      "userId": "u-009",
+      "type": "cholesterol",
+      "value": 252,
+      "date": "2026-09-14",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0059",
+      "userId": "u-009",
+      "type": "triglycerides",
+      "value": 235,
+      "date": "2026-09-14",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0060",
+      "userId": "u-009",
+      "type": "hemoglobin",
+      "value": 16.1,
+      "date": "2026-09-14",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0009",
+      "userId": "u-004",
+      "type": "glucose",
+      "value": 92,
+      "date": "2026-09-18",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0010",
+      "userId": "u-004",
+      "type": "cholesterol",
+      "value": 204,
+      "date": "2026-09-18",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0011",
+      "userId": "u-004",
+      "type": "triglycerides",
+      "value": 127,
+      "date": "2026-09-18",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0012",
+      "userId": "u-004",
+      "type": "hemoglobin",
+      "value": 12.7,
+      "date": "2026-09-18",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0128",
+      "userId": "u-021",
+      "type": "glucose",
+      "value": 62,
+      "date": "2026-09-20",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0129",
+      "userId": "u-021",
+      "type": "cholesterol",
+      "value": 159,
+      "date": "2026-09-20",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0130",
+      "userId": "u-021",
+      "type": "triglycerides",
+      "value": 80,
+      "date": "2026-09-20",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0131",
+      "userId": "u-021",
+      "type": "hemoglobin",
+      "value": 12.9,
+      "date": "2026-09-20",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0025",
+      "userId": "u-006",
+      "type": "glucose",
+      "value": 89,
+      "date": "2026-09-22",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0026",
+      "userId": "u-006",
+      "type": "cholesterol",
+      "value": 170,
+      "date": "2026-09-22",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0027",
+      "userId": "u-006",
+      "type": "triglycerides",
+      "value": 98,
+      "date": "2026-09-22",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0028",
+      "userId": "u-006",
+      "type": "hemoglobin",
+      "value": 13.6,
+      "date": "2026-09-22",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0049",
+      "userId": "u-008",
+      "type": "glucose",
+      "value": 138,
+      "date": "2026-09-25",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0050",
+      "userId": "u-008",
+      "type": "cholesterol",
+      "value": 239,
+      "date": "2026-09-25",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0051",
+      "userId": "u-008",
+      "type": "triglycerides",
+      "value": 195,
+      "date": "2026-09-25",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0052",
+      "userId": "u-008",
+      "type": "hemoglobin",
+      "value": 13,
+      "date": "2026-09-25",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0148",
+      "userId": "u-023",
+      "type": "glucose",
+      "value": 102,
+      "date": "2026-09-26",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0149",
+      "userId": "u-023",
+      "type": "cholesterol",
+      "value": 186,
+      "date": "2026-09-26",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0150",
+      "userId": "u-023",
+      "type": "triglycerides",
+      "value": 130,
+      "date": "2026-09-26",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0151",
+      "userId": "u-023",
+      "type": "hemoglobin",
+      "value": 15.4,
+      "date": "2026-09-26",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0065",
+      "userId": "u-010",
+      "type": "glucose",
+      "value": 86,
+      "date": "2026-09-27",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0066",
+      "userId": "u-010",
+      "type": "cholesterol",
+      "value": 157,
+      "date": "2026-09-27",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0067",
+      "userId": "u-010",
+      "type": "triglycerides",
+      "value": 88,
+      "date": "2026-09-27",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0068",
+      "userId": "u-010",
+      "type": "hemoglobin",
+      "value": 10.8,
+      "date": "2026-09-27",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0096",
+      "userId": "u-017",
+      "type": "glucose",
+      "value": 90,
+      "date": "2026-09-29",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0097",
+      "userId": "u-017",
+      "type": "cholesterol",
+      "value": 167,
+      "date": "2026-09-29",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0098",
+      "userId": "u-017",
+      "type": "triglycerides",
+      "value": 94,
+      "date": "2026-09-29",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0099",
+      "userId": "u-017",
+      "type": "hemoglobin",
+      "value": 12.7,
+      "date": "2026-09-29",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0081",
+      "userId": "u-012",
+      "type": "glucose",
+      "value": 134,
+      "date": "2026-09-30",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0082",
+      "userId": "u-012",
+      "type": "cholesterol",
+      "value": 238,
+      "date": "2026-09-30",
+      "staffId": "u-003",
+      "notes": ""
+    },
+    {
+      "id": "e-0083",
+      "userId": "u-012",
+      "type": "triglycerides",
+      "value": 268,
+      "date": "2026-09-30",
+      "staffId": "u-002",
+      "notes": ""
+    },
+    {
+      "id": "e-0084",
+      "userId": "u-012",
+      "type": "hemoglobin",
+      "value": 15,
+      "date": "2026-09-30",
+      "staffId": "u-003",
+      "notes": ""
+    }
+  ]
+}
