@@ -105,36 +105,104 @@ export function buildReportRows(exams, usersById) {
 const csvCell = (v) => {
   let s = String(v ?? '');
   // Evita inyección de fórmulas al abrir el CSV en Excel
-  if (/^[=+\-@]/.test(s) && Number.isNaN(Number(s))) s = `'${s}`;
-  return /[",\n;]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  if (/^[=+\-@]/.test(s) && Number.isNaN(Number(s.replace(',', '.')))) s = `'${s}`;
+  return /[";\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 };
 
+// CSV pensado para Excel en español: separador ";" y coma decimal, con BOM para las tildes.
 export function downloadReportCSV(rows, from, to) {
-  const lines = [REPORT_HEADERS, ...rows.map(rowToArray)].map((r) => r.map(csvCell).join(','));
-  // BOM para que Excel respete las tildes
+  const toRow = (r) => rowToArray(r).map((v) => (typeof v === 'number' ? String(v).replace('.', ',') : v));
+  const lines = [REPORT_HEADERS, ...rows.map(toRow)].map((r) => r.map(csvCell).join(';'));
   downloadBlob(new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8' }), `reporte-examenes_${from}_${to}.csv`);
 }
 
-export function downloadReportXLSX(rows, from, to) {
-  const XLSX = window.XLSX;
-  const wb = XLSX.utils.book_new();
+// ---------- Excel (.xlsx) con formato ----------
+const XL = {
+  brand: 'FF0F766E',
+  line: 'FFD0D7DE',
+  zebra: 'FFF6F8FA',
+  status: {
+    Normal: { fg: 'FF1A7F4B', bg: 'FFE3F5EA' },
+    'Límite': { fg: 'FF8A5A00', bg: 'FFFDF0D2' },
+    Alto: { fg: 'FFB3261E', bg: 'FFFBE4E2' },
+    Bajo: { fg: 'FF1D4F91', bg: 'FFE1ECFA' },
+  },
+};
+const border = { style: 'thin', color: { argb: XL.line } };
+const allBorders = { top: border, left: border, bottom: border, right: border };
+const fill = (argb) => ({ type: 'pattern', pattern: 'solid', fgColor: { argb } });
 
-  const ws = XLSX.utils.aoa_to_sheet([REPORT_HEADERS, ...rows.map(rowToArray)]);
-  ws['!cols'] = [12, 26, 14, 30, 12, 18, 11, 8, 20, 10, 22].map((wch) => ({ wch }));
-  ws['!autofilter'] = { ref: `A1:K${rows.length + 1}` };
-  XLSX.utils.book_append_sheet(wb, ws, 'Exámenes');
+function styleHeader(row) {
+  row.height = 22;
+  row.eachCell((c) => {
+    c.font = { bold: true, color: { argb: 'FFFFFFFF' } };
+    c.fill = fill(XL.brand);
+    c.alignment = { vertical: 'middle', horizontal: 'center' };
+    c.border = allBorders;
+  });
+}
 
-  // Hoja de resumen por tipo de examen
-  const summary = [['Examen', 'Total', 'Normal', 'Límite', 'Alto', 'Bajo', 'Promedio']];
+export async function downloadReportXLSX(rows, from, to) {
+  const wb = new window.ExcelJS.Workbook();
+  wb.creator = 'Login Medical';
+  wb.created = new Date();
+
+  // --- Hoja 1: Exámenes ---
+  const ws = wb.addWorksheet('Exámenes', { views: [{ state: 'frozen', ySplit: 3, showGridLines: false }] });
+  const widths = [12, 26, 14, 30, 12, 18, 12, 9, 20, 10, 22];
+  ws.columns = widths.map((width) => ({ width }));
+  ws.mergeCells(1, 1, 1, REPORT_HEADERS.length);
+  const title = ws.getCell('A1');
+  title.value = `Reporte de exámenes: ${formatDate(from)} al ${formatDate(to)}`;
+  title.font = { bold: true, size: 14, color: { argb: XL.brand } };
+  ws.getRow(1).height = 26;
+  ws.getCell('A2').value = `${rows.length} resultados · generado el ${formatDate(todayISO())}`;
+  ws.getCell('A2').font = { italic: true, color: { argb: 'FF667380' } };
+
+  styleHeader(ws.addRow(REPORT_HEADERS));
+  rows.forEach((r, i) => {
+    const [, ...rest] = rowToArray(r);
+    const [y, m, d] = r.date.split('-').map(Number);
+    const row = ws.addRow([new Date(Date.UTC(y, m - 1, d)), ...rest]);
+    row.getCell(1).numFmt = 'dd/mm/yyyy';
+    row.getCell(1).alignment = { horizontal: 'center' };
+    row.getCell(7).numFmt = r.typeKey === 'hemoglobin' ? '0.0' : '0';
+    row.getCell(7).font = { bold: true };
+    [5, 8, 11].forEach((c) => { row.getCell(c).alignment = { horizontal: 'center' }; });
+    row.eachCell({ includeEmpty: true }, (c) => {
+      c.border = allBorders;
+      if (i % 2) c.fill = fill(XL.zebra);
+    });
+    const st = XL.status[r.status];
+    const sc = row.getCell(10);
+    sc.font = { bold: true, color: { argb: st.fg } };
+    sc.fill = fill(st.bg);
+    sc.alignment = { horizontal: 'center' };
+  });
+  ws.autoFilter = { from: { row: 3, column: 1 }, to: { row: 3, column: REPORT_HEADERS.length } };
+
+  // --- Hoja 2: Resumen por examen ---
+  const ws2 = wb.addWorksheet('Resumen', { views: [{ showGridLines: false }] });
+  ws2.columns = [22, 10, 10, 10, 10, 10, 12].map((width) => ({ width }));
+  styleHeader(ws2.addRow(['Examen', 'Total', 'Normal', 'Límite', 'Alto', 'Bajo', 'Promedio']));
   for (const key of EXAM_KEYS) {
     const sub = rows.filter((r) => r.typeKey === key);
     const count = (label) => sub.filter((r) => r.status === label).length;
-    const avg = sub.length ? Math.round((sub.reduce((s, r) => s + r.value, 0) / sub.length) * 10) / 10 : 0;
-    summary.push([EXAM_TYPES[key].label, sub.length, count('Normal'), count('Límite'), count('Alto'), count('Bajo'), avg]);
+    const avg = sub.length ? sub.reduce((s, r) => s + r.value, 0) / sub.length : null;
+    const row = ws2.addRow([EXAM_TYPES[key].label, sub.length, count('Normal'), count('Límite'), count('Alto'), count('Bajo'), avg]);
+    row.getCell(7).numFmt = '0.0';
+    row.eachCell((c, n) => { c.border = allBorders; if (n > 1) c.alignment = { horizontal: 'center' }; });
+    row.getCell(1).font = { bold: true };
   }
-  const ws2 = XLSX.utils.aoa_to_sheet(summary);
-  ws2['!cols'] = [20, 8, 8, 8, 8, 8, 10].map((wch) => ({ wch }));
-  XLSX.utils.book_append_sheet(wb, ws2, 'Resumen');
+  ['C', 'D', 'E', 'F'].forEach((col, i) => {
+    const st = XL.status[['Normal', 'Límite', 'Alto', 'Bajo'][i]];
+    for (let r = 2; r <= EXAM_KEYS.length + 1; r++) {
+      const c = ws2.getCell(`${col}${r}`);
+      c.font = { color: { argb: st.fg }, bold: true };
+      c.fill = fill(st.bg);
+    }
+  });
 
-  XLSX.writeFile(wb, `reporte-examenes_${from}_${to}.xlsx`);
+  const buf = await wb.xlsx.writeBuffer();
+  downloadBlob(new Blob([buf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }), `reporte-examenes_${from}_${to}.xlsx`);
 }

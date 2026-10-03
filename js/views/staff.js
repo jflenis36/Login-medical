@@ -124,7 +124,7 @@ export function renderStaffClient(root, me, id) {
           <p class="muted">${esc(user.email)} · Doc. ${esc(user.document || '-')} · ${esc(SEX[user.sex] || '-')} · Nac. ${formatDate(user.birthdate)}</p></div>
         </div>
         <div class="btn-row">
-          <button class="btn btn-ghost" id="add-exam">+ Registrar examen</button>
+          ${me.role === 'staff' ? '<button class="btn btn-ghost" id="add-exam">+ Registrar examen</button>' : ''}
           <button class="btn btn-primary" id="pdf-all" ${exams.length ? '' : 'disabled'}>Descargar PDF</button>
         </div>
       </div>
@@ -136,7 +136,7 @@ export function renderStaffClient(root, me, id) {
       <section class="card"><h3>Historial de exámenes</h3>${examsTable(user, exams, { pdf: true })}</section>`;
     mountEvolution($('#evo', root), user, exams);
     $('#pdf-all', root).addEventListener('click', () => downloadPatientPDF(user, exams));
-    $('#add-exam', root).addEventListener('click', () => openExamModal());
+    $('#add-exam', root)?.addEventListener('click', () => openExamModal());
     $$('[data-exam-pdf]', root).forEach((b) => b.addEventListener('click', () => {
       const e = exams.find((x) => x.id === b.dataset.examPdf);
       downloadPatientPDF(user, [e], { title: `Resultado de ${EXAM_TYPES[e.type].label}`, suffix: `${e.type}`, allExams: exams });

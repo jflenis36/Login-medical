@@ -24,7 +24,7 @@ Los otros 19 clientes usan `Cliente123!` (ver `data/db.json`).
 
 ## Roles
 
-- **Administrador**: KPIs, listado paginado de usuarios, crear usuarios y cambiar rol / estado / contraseña desde un popup.
+- **Administrador**: KPIs, listado paginado de usuarios, crear usuarios y cambiar rol / estado / contraseña desde un popup. También puede consultar pacientes, exámenes y reportes (solo lectura).
 - **Atención**: lista de clientes con "qué necesita", detalle y PDF por cliente, registro de exámenes, reporte general por fechas en CSV y Excel.
 - **Cliente** (rol por defecto al registrarse): sus exámenes, evolución y descarga en PDF. El envío por correo queda como botón "próximamente".
 
@@ -37,4 +37,4 @@ El administrador puede descargar/cargar un `db.json` o restablecer los datos de 
 
 ## Librerías (en `vendor/`, sin CDN)
 
-Chart.js 4 (KPIs/gráficas), jsPDF + autoTable (PDF), SheetJS (Excel).
+Chart.js 4 (KPIs/gráficas), jsPDF + autoTable (PDF), ExcelJS (Excel con formato).

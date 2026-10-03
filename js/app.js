@@ -10,20 +10,20 @@ import { renderClient } from './views/client.js';
 const app = $('#app');
 
 const NAV = {
-  admin: [['#/admin', 'Usuarios y roles']],
+  admin: [['#/admin', 'Usuarios y roles'], ['#/staff', 'Pacientes'], ['#/staff/reports', 'Reportes']],
   staff: [['#/staff', 'Pacientes'], ['#/staff/reports', 'Reportes']],
   client: [['#/client', 'Mis exámenes']],
 };
 
-// Cada ruta indica qué rol puede verla (null = pública)
+// Cada ruta indica qué roles pueden verla (null = pública)
 const ROUTES = [
   { re: /^#\/login$/, role: null, view: (root) => renderLogin(root) },
   { re: /^#\/register$/, role: null, view: (root) => renderRegister(root) },
-  { re: /^#\/admin$/, role: 'admin', view: (root, me) => renderAdmin(root, me) },
-  { re: /^#\/staff$/, role: 'staff', view: (root) => renderStaffHome(root) },
-  { re: /^#\/staff\/reports$/, role: 'staff', view: (root) => renderStaffReports(root) },
-  { re: /^#\/staff\/client\/([\w-]+)$/, role: 'staff', view: (root, me, m) => renderStaffClient(root, me, m[1]) },
-  { re: /^#\/client$/, role: 'client', view: (root, me) => renderClient(root, me) },
+  { re: /^#\/admin$/, role: ['admin'], view: (root, me) => renderAdmin(root, me) },
+  { re: /^#\/staff$/, role: ['staff', 'admin'], view: (root) => renderStaffHome(root) },
+  { re: /^#\/staff\/reports$/, role: ['staff', 'admin'], view: (root) => renderStaffReports(root) },
+  { re: /^#\/staff\/client\/([\w-]+)$/, role: ['staff', 'admin'], view: (root, me, m) => renderStaffClient(root, me, m[1]) },
+  { re: /^#\/client$/, role: ['client'], view: (root, me) => renderClient(root, me) },
 ];
 
 function shell(me, hash) {
@@ -60,7 +60,7 @@ function route() {
     return;
   }
   if (!me) { location.replace('#/login'); return; }
-  if (me.role !== r.role) { location.replace(homeFor(me)); return; }
+  if (!r.role.includes(me.role)) { location.replace(homeFor(me)); return; }
 
   app.innerHTML = shell(me, hash);
   $('#logout').addEventListener('click', () => { logout(); location.hash = '#/login'; });
